@@ -18,6 +18,10 @@ window.onload = function(){
 	
 	start_btn.addEventListener("click", function(){
 		var form_time_interval = document.getElementById("refresh_interval").value;
+		
+		
+		
+		
 		if( isNumber(form_time_interval)){
 			refresh_time_interval =  form_time_interval;
 		}

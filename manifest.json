@@ -16,7 +16,8 @@
 	"permissions": [
 		"tabs", "*://*/*",
 		"tts",
-		"ttsEngine"
+		"ttsEngine",
+		"notifications"
 	],
 	"background": {
 		"scripts": ["background.js"]

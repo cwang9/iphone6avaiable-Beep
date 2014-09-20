@@ -8,6 +8,7 @@ function iphone6AvailabilityCheck(){
 
 	if( document.body.innerHTML.indexOf("true") > -1){
 		localStorage['found'] = "TRUE";
+		alert("IPhone 6 is now avaiable");
 		chrome.extension.sendRequest({action: "available"});
 	}else{
 		setTimeout(function(){location.reload();} , refresh_time_interval);
@@ -31,7 +32,7 @@ chrome.extension.onRequest.addListener(function(request, sender, callback)
     switch(request.action)
     {
         case "start":
-
+			
 			refresh_time_interval = request.refresh_time_interval;
 			
 			localStorage['found']=  "FALSE";
