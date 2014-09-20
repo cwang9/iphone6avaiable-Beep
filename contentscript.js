@@ -19,7 +19,7 @@ function iphone6AvailabilityCheck(){
 
 if (localStorage.getItem("found") != null){
 	found = localStorage['found'];
-		
+	refresh_time_interval = localStorage['refresh_time_interval'];
 	if (found == "FALSE"){
 		iphone6AvailabilityCheck();
 	}
