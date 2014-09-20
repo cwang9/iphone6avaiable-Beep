@@ -1,0 +1,24 @@
+{
+	"name": "iphone6 availability Extension",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "to check iphone 6/iphone 6 plus availability in HK",
+	"browser_action": {
+	"default_icon": "start-icon.png",
+	"default_popup": "popup.html"
+	},
+
+	"content_scripts": [ {
+	  "matches": ["https://reserve.cdn-apple.com/HK/en_HK/reserve/iPhone/availability.json"],
+	  "js": ["contentscript.js"],
+	  "run_at":"document_end"
+	} ],
+	"permissions": [
+		"tabs", "*://*/*",
+		"tts",
+		"ttsEngine"
+	],
+	"background": {
+		"scripts": ["background.js"]
+	}
+}
